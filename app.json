@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "TestUpdatesImages",
+    "slug": "TestUpdatesImages",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.douglowderexpo.TestUpdatesImages"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.douglowderexpo.TestUpdatesImages"
+    },
+    "plugins": [
+      "expo-updates"
+    ],
+    "updates": {
+      "requestHeaders": {
+        "expo-channel-name": "main"
+      },
+      "url": "https://u.expo.dev/e799e273-3d54-4fb7-8159-4f22f97a2bd5"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "updates": {
+        "assetPatternsToBeBundled": [
+          "assetsInUpdates/*"
+        ]
+      },
+      "eas": {
+        "projectId": "e799e273-3d54-4fb7-8159-4f22f97a2bd5"
+      }
+    },
+    "owner": "douglowderexpo",
+    "runtimeVersion": "1.0.0"
+  }
+}

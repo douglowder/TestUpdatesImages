@@ -1,0 +1,13 @@
+diff --git a/node_modules/expo-modules-core/ios/Logging/LogHandlers.swift b/node_modules/expo-modules-core/ios/Logging/LogHandlers.swift
+index 62dbdb9..e71b817 100644
+--- a/node_modules/expo-modules-core/ios/Logging/LogHandlers.swift
++++ b/node_modules/expo-modules-core/ios/Logging/LogHandlers.swift
+@@ -23,7 +23,7 @@ internal class OSLogHandler: LogHandler {
+   }
+ 
+   func log(type: LogType, _ message: String) {
+-    osLogger.log(level: type.toOSLogType(), "\(message)")
++    osLogger.log(level: type.toOSLogType(), "\(message, privacy: .public)")
+   }
+ }
+ 

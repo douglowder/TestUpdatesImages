@@ -1,0 +1,27 @@
+diff --git a/node_modules/expo-updates-interface/ios/EXUpdatesInterface/UpdatesExternalInterface.swift b/node_modules/expo-updates-interface/ios/EXUpdatesInterface/UpdatesExternalInterface.swift
+index 7fb6e97..e5a776f 100644
+--- a/node_modules/expo-updates-interface/ios/EXUpdatesInterface/UpdatesExternalInterface.swift
++++ b/node_modules/expo-updates-interface/ios/EXUpdatesInterface/UpdatesExternalInterface.swift
+@@ -4,7 +4,6 @@ import Foundation
+ 
+ public typealias UpdatesErrorBlock = (_ error: Error) -> Void
+ public typealias UpdatesUpdateSuccessBlock = (_ manifest: [String: Any]?) -> Void
+-public typealias UpdatesQuerySuccessBlock = (_ updateIds: [UUID]) -> Void
+ public typealias UpdatesProgressBlock = (_ successfulAssetCount: UInt, _ failedAssetCount: UInt, _ totalAssetCount: UInt) -> Void
+ 
+ /**
+@@ -32,14 +31,4 @@ public protocol UpdatesExternalInterface {
+     success successBlock: @escaping UpdatesUpdateSuccessBlock,
+     error errorBlock: @escaping UpdatesErrorBlock
+   )
+-
+-  /**
+-   * Obtains a list of UUIDs for updates already in the updates DB that are in the READY state.
+-   * The success block will pass in the array of UUIDs
+-   */
+-  @objc func storedUpdateIds(
+-    withConfiguration configuration: [String: Any],
+-    success successBlock: @escaping UpdatesQuerySuccessBlock,
+-    error errorBlock: @escaping UpdatesErrorBlock
+-  )
+ }
