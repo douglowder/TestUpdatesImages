@@ -77,7 +77,7 @@ export default function App() {
         style={{ height: 100, width: 100 }}
       />
       <Image
-        source={require('./assets/coffee-prep.jpg')}
+        source={require('./assetsInUpdates/coffee-prep.jpg')}
         height={100}
         width={100}
         style={{ height: 100, width: 100 }}
